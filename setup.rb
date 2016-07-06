@@ -27,7 +27,6 @@ class TemplateSetup
     puts "Working with name '#{@options.name}'"
     # Beware! – The order is important!
     gsub_files
-    rename_dirs
     rename_files
     finish
   end
@@ -58,7 +57,6 @@ class TemplateSetup
               "Your developer namespace (mandatory) – see
                                      https://developer.ubuntu.com/en/publish/") do |n|
         @options.namespace = n
-
       end
 
       opts.on_tail("-h", "--help", "Show this message") do
@@ -104,8 +102,8 @@ class TemplateSetup
     file_names =  [
                   'ubuntu-go-qml-template.desktop',
                   'ubuntu-go-qml-template.goproject',
-                  'src/ubuntu-go-qml-template/main.go',
-                  'share/ubuntu-go-qml-template/main.qml',
+                  'src/main.go',
+                  'share/qml/main.qml',
                   'manifest.json',
                   'run.sh',
                   'build.sh',
@@ -120,13 +118,6 @@ class TemplateSetup
              .gsub(/ubuntu-go-qml-template/, @options.name)
       pp text if @options.verbose
       File.open(fname, "w") {|f| f.puts text }
-    end
-
-  end
-
-  def rename_dirs
-    %w{ src share}.each do |d|
-      File.rename "#{d}/ubuntu-go-qml-template", "#{d}/#{@options.name}"
     end
   end
 
@@ -144,7 +135,6 @@ class TemplateSetup
   def finish
     puts "Finished! Yay! – Now continue with running: 'chroot-scripts/setup-chroot.sh'"
   end
-
 end
 
 p = TemplateSetup.new(ARGV)

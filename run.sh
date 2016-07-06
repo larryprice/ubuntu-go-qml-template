@@ -3,4 +3,4 @@
 DIR=$(dirname $(readlink -f "$0"))
 
 $DIR/build.sh
-$DIR/bin/beer-buddy
+$DIR/bin/ubuntu-go-qml-template
