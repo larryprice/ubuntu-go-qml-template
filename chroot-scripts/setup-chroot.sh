@@ -23,4 +23,4 @@ GO_DIR=$DIR/../go-installation
 mkdir -p $GO_DIR
 cd $GO_DIR
 
-$DIR/install-go-1-3-3.sh
+$DIR/install-go-armhf.sh

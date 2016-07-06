@@ -25,7 +25,7 @@ chroot-scripts/setup-chroot.sh
 
 Note that it is important to call the `setup-chroot.sh` script from the top-level project directory.
 
-These commands will create a new click chroot or update an already existing one with the required build dependencies. Afterwards, it will install version 1.3.3 of Go inside the project directory, as it is required for cross-compiling the Go QML package. (Don't worry. The system will not use this one by default. Other projects will still use the `golang` package installed via `apt-get install golang`.)
+These commands will create a new click chroot or update an already existing one with the required build dependencies. Afterwards, it will install version 1.6.2 of Go inside the project directory, as it is required for cross-compiling the Go QML package. (Don't worry. The system will not use this one by default. Other projects will still use the `golang` package installed via `apt-get install golang`.)
 
 Running the project on your PC:
 -------------------------------
