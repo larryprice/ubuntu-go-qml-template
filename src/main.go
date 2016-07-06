@@ -14,7 +14,7 @@ func main() {
 
 func run() error {
         engine := qml.NewEngine()
-        component, err := engine.LoadFile("share/ubuntu-go-qml-template/main.qml")
+        component, err := engine.LoadFile("share/qml/main.qml")
         if err != nil {
                 return err
         }
@@ -46,4 +46,3 @@ func (ctrl *Control) Hello() {
                 qml.Changed(ctrl, &ctrl.Message)
         }()
 }
-
