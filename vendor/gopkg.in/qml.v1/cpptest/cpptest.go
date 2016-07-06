@@ -13,7 +13,7 @@ import "C"
 import (
 	"unsafe"
 
-	"launchpad.net/ciborium/qml.v1"
+	"gopkg.in/qml.v1"
 )
 
 func NewTestType(engine *qml.Engine) qml.Object {

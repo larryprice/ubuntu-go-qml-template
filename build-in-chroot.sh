@@ -18,7 +18,7 @@ find $CLICK_DIR/.. -name "*.click" -exec rm {} \;
 
 # Build the project
 
-click chroot -a armhf -f ubuntu-sdk-15.04 -s vivid run CGO_ENABLED=1 GOARCH=arm GOARM=7 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig GOPATH=$DIR GOROOT=$GO_DIR CC=arm-linux-gnueabihf-gcc CXX=arm-linux-gnueabihf-g++ $GO_BIN_DIR/go build -o $BIN_DIR/linux_arm/beer-buddy -ldflags '-extld=arm-linux-gnueabihf-gcc' -v -x src/main.go
+click chroot -a armhf -f ubuntu-sdk-15.04 -s vivid run CGO_ENABLED=1 GOARCH=arm GOARM=7 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig GOPATH=$GOPATH GOROOT=$GO_DIR PWD=$PWD CC=arm-linux-gnueabihf-gcc CXX=arm-linux-gnueabihf-g++ $GO_BIN_DIR/go build -o $BIN_DIR/linux_arm/beer-buddy -ldflags '-extld=arm-linux-gnueabihf-gcc' -v -x src/main.go
 
 # Copy files into click directory
 

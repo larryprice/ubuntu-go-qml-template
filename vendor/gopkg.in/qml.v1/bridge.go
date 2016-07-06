@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"launchpad.net/ciborium/qml.v1/cdata"
+	"gopkg.in/qml.v1/cdata"
 )
 
 var (

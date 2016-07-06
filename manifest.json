@@ -1,15 +1,15 @@
 {
-    "name": "ubuntu-go-qml-template.nikwen",
-    "description": "Description of ubuntu-go-qml-template",
+    "name": "beer-buddy.larryprice",
+    "description": "Homebrew notebook and recipe keeper",
     "architecture": "armhf",
-    "title": "ubuntu-go-qml-template",
+    "title": "Beer Buddy",
     "hooks": {
-        "ubuntu-go-qml-template": {
+        "beer-buddy": {
             "apparmor": "ubuntu-go-qml-template.apparmor",
             "desktop":  "ubuntu-go-qml-template.desktop"
         }
     },
     "version": "0.1",
-    "maintainer": "Niklas Wenzel <nikwen.developer@gmail.com>",
+    "maintainer": "Larry Price <larry.price.dev@gmail.com>",
     "framework" : "ubuntu-sdk-15.04"
 }
