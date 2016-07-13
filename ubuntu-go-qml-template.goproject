@@ -7,14 +7,15 @@ GoProject {
         name: "ubuntu-go-qml-template"
 
         GoFiles {
+          directory: src/
         }
 
         /* Include .qml, .js, and image files from main directory and subdirectories */
         QmlFiles {
-            directory:"share/ubuntu-go-qml-template"
+            directory:"share/qml"
         }
         JavaScriptFiles {
-            directory:"share/ubuntu-go-qml-template"
+            directory:"share/js"
         }
         Files {
             directory: "."
@@ -28,4 +29,3 @@ GoProject {
         }
     }
 }
-
